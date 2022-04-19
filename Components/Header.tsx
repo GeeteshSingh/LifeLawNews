@@ -10,7 +10,8 @@ interface Props {
     onChangeText: (text: string) => void
 }
 
-const Input: FC<Props> = (props) => {
+const Input: FC<Props> = (props: Props) => {
+    // @ts-ignore
     return (
         <View style={styles.container}>
             <View style={{flex: 0.1, justifyContent: 'center', alignItems: 'flex-start'}}>
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
         borderColor: '#000',
         backgroundColor: '#C0C0C0',
         borderRadius: 20,
-        borderWidth:2
+        borderWidth: 2
     },
     input: {
         padding: 5,

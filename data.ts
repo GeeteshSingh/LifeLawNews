@@ -3,8 +3,8 @@ export interface User {
     author: string,
     title: string,
     description: string,
-    url: string,
-    urlToImage: string,
+    url?: string,
+    urlToImage?: string,
     content: string
 }
 
@@ -13,7 +13,7 @@ export interface Articles {
 }
 
 export interface Source {
-    id: any,
+    id?: any,
     name: string
 }
 
