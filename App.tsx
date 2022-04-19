@@ -11,7 +11,6 @@ export default function App(props: User) {
     const [isLoading, setIsLoading] = useState(true)
     const [searchquery, setSearchquery] = useState<string>('')
     console.clear()
-    console.log('News Data:', news)
     useEffect(() => {
         axios
             .get<User []>('https://newsapi.org/v2/top-headlines?country=us&apiKey=017733313db64302af29a128226c3ed2')
@@ -39,7 +38,7 @@ export default function App(props: User) {
             <View style={{marginVertical:30}}>
                 <Text>Some News</Text>
                 <Text style={{color: '#000'}}>{props.content}</Text>
-                {console.log('articles',props.articles)}
+                {console.log('articles',news)}
             </View>
             <StatusBar style="auto"/>
         </View>
