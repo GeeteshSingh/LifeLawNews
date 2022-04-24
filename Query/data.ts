@@ -6,10 +6,12 @@ export interface User {
     url?: string,
     urlToImage?: string,
     content: string
+    source: Source,
+
 }
 
 export interface Articles {
-    source: Source,
+    source: Source[],
 }
 
 export interface Source {
