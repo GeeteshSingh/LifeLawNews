@@ -1,10 +1,11 @@
 //Libraries and dependencies
 import {StatusBar} from 'expo-status-bar';
-import React, {useState, useEffect} from 'react';
-import {StyleSheet, Text, View, FlatList, RefreshControl} from 'react-native';
+import React from 'react';
+import {StyleSheet, View} from 'react-native';
+
 import {QueryClient,QueryClientProvider} from "react-query";
 //components import
-import {User, Source} from "./Query/data";
+import {User} from "./Query/data";
 import Input from "./Components/Header";
 import NewsAPI from "./Components/News";
 

@@ -1,7 +1,8 @@
 import React, {useState, FC} from 'react'
-import {Dimensions, Share, StyleSheet, View, Text, Image} from "react-native";
+import {Dimensions, Share, StyleSheet, View, Text, Image, Alert} from "react-native";
 import {Avatar, Button, Card, Title, Paragraph} from 'react-native-paper';
 import {User} from "../Query/data";
+import { Icon } from 'react-native-elements'
 
 const {width, height} = Dimensions.get('window')
 
@@ -15,6 +16,13 @@ const Item: FC<User> = (props) => {
                     <Paragraph>{props.description}</Paragraph>
                     <Card.Cover style={styles.img} source={{uri: props.urlToImage}}/>
                 </Card.Content>
+                <View style={styles.btn}>
+                    <Button  onPress={()=> Alert.alert('okay')}>Ok</Button>
+                    <Button  onPress={()=> Alert.alert('okay')}>
+
+                    </Button>
+                </View>
+
             </Card>
 
         </View>
@@ -57,5 +65,8 @@ const styles = StyleSheet.create({
         marginHorizontal: width * 0.02,
         fontSize: 11,
         color: 'gray'
+    },
+    btn:{
+        flexDirection:'row-reverse'
     }
 })

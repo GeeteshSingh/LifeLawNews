@@ -11,6 +11,7 @@ interface Props {
 }
 
 const Input: FC<Props> = (props: Props) => {
+
     return (
         <View style={styles.container}>
             <View style={{flex: 0.1, justifyContent: 'center', alignItems: 'flex-start'}}>
