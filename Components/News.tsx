@@ -29,19 +29,19 @@ export default function NewsAPI(props: User) {
 
     return (
         <View style={styles.container}>
-    <FlatList
-    style={{marginVertical: 20}}
-    data={news}
-    renderItem={({item}) => (
-        <Item author={item.author} title={item.title} description={item.description}
-    urlToImage={item.urlToImage}
-    articles={item.articles} content={item.content} url={item.url} source={item.source}/>
-)}
-    keyExtractor={(item, index) => index.toString()}
-    />
-    <StatusBar style="auto"/>
+            <FlatList
+                style={{marginVertical: 20}}
+                data={news}
+                renderItem={({item}) => (
+                    <Item author={item.author} title={item.title} description={item.description}
+                          urlToImage={item.urlToImage}
+                          articles={item.articles} content={item.content} url={item.url} source={item.source}/>
+                )}
+                keyExtractor={(item, index) => index.toString()}
+            />
+            <StatusBar style="auto"/>
         </View>
-);
+    );
 }
 
 const styles = StyleSheet.create({
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         // padding:5
 
     },
-    wrapper:{
-        color:'#000'
+    wrapper: {
+        color: '#000'
     }
 });
